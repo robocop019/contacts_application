@@ -7,6 +7,8 @@ json.email contact.email
 json.phone_number contact.phone_number
 json.bio contact.bio
 
+json.user_id contact.user_id
+
 json.formatted do  
   json.updated_at contact.friendly_updated_at
 end
