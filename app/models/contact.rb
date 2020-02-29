@@ -5,6 +5,8 @@ class Contact < ApplicationRecord
   validates :email, uniqueness: true
 
   belongs_to :user
+  has_many :group_contacts
+  has_many :groups, through: :group_contacts
 
   def full_name
     "#{first_name} #{middle_name} #{last_name}"
