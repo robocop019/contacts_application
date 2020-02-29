@@ -12,3 +12,7 @@ json.user_id contact.user_id
 json.formatted do  
   json.updated_at contact.friendly_updated_at
 end
+
+json.groups do
+  json.array! contact.groups, partial: 'api/groups/group', as: :group
+end
